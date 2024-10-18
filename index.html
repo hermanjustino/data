@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Neural Network Background</title>
+  <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body class="dark-mode">
+  <nav class="navbar">
+    <div class="navbar-left">
+      <a href="#" class="navbar-item">Home</a>
+    </div>
+    <div class="navbar-right">
+      <a href="#" class="navbar-item">About</a>
+      <a href="#" class="navbar-item">Projects</a>
+      <a href="#" class="navbar-item">Contact</a>
+    </div>
+  </nav>
+  <div class="center-content">
+    <h1>Herman Justino</h1>
+    <hr>
+    <div class="social-links">
+      <a href="https://github.com/yourusername" target="_blank">
+        <img src="./assets/github-dark.svg" alt="GitHub" class="icon">
+      </a>
+      <a href="https://linkedin.com/in/yourusername" target="_blank">
+        <img src="./assets/linkedin-dark.svg" alt="LinkedIn" class="icon">
+      </a>
+    </div>
+  </div>
+  <div id="projects" class="projects-section"></div>
+  <canvas id="neural-network"></canvas>
+  <div class="toggle-container">
+    <input type="checkbox" id="toggle-mode" class="toggle-switch">
+    <label for="toggle-mode" class="toggle-label"></label>
+  </div>
+  <script src="./scripts/neural-network.js"></script>
+  <script src="./scripts/projects.js"></script>
+</body>
+</html>
