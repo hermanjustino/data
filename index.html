@@ -22,12 +22,13 @@
     <div class="bio-container" id="home">
       <div class="bio">
         <h1>Herman Justino</h1>
+        <p class="typewriter">Data Scientist</p>
         <hr>
         <div class="social-links">
-          <a href="https://github.com/yourusername" target="_blank">
+          <a href="https://github.com/hermanjustino" target="_blank">
             <img src="./assets/github-dark.svg" alt="GitHub" class="icon">
           </a>
-          <a href="https://linkedin.com/in/yourusername" target="_blank">
+          <a href="https://www.linkedin.com/in/hermanjustino/" target="_blank">
             <img src="./assets/linkedin-dark.svg" alt="LinkedIn" class="icon">
           </a>
         </div>
@@ -38,22 +39,38 @@
           explore new advancements in the field.</p>
       </div>
     </div>
-    <h1 id="portfolio">Portfolio</h1>
-    <h3>Some of the projects I've been working on</h3>
-    <div class="filter-bar">
-      <div class="tabs">
-        <button class="tab-button active" data-tab="type">Type</button>
-        <button class="tab-button" data-tab="tools">Tools</button>
-      </div>
-      <div class="tab-content" id="type">
-        <!-- Filter options for type will be generated here -->
-      </div>
-      <div class="tab-content" id="tools" style="display: none;">
-        <!-- Filter options for tools will be generated here -->
+
+    <!-- Portfolio Section -->
+<div class="portfolio-container">
+  <h1 id="portfolio">Portfolio</h1>
+  <h3>Some of the projects I've been working on</h3>
+  <div class="filter-bar">
+    <div class="tabs">
+      <button class="tab-button active" data-tab="type">Type</button>
+      <button class="tab-button" data-tab="tools">Tools</button>
+    </div>
+    <div class="tab-content" id="type">
+      <!-- Filter options for type will be generated here -->
+    </div>
+    <div class="tab-content" id="tools" style="display: none;">
+      <!-- Filter options for tools will be generated here -->
+    </div>
+  </div>
+  <div id="projects" class="projects-section"></div>
+</div>
+
+    <!-- Contact Section -->
+    <div id="contact" class="contact-section">
+      <h1>Contact</h1>
+      <p class="contact-paragraph">If you would like to get in touch, feel free to connect with me on LinkedIn or check out my GitHub profile.</p>
+      <div class="contact-buttons">
+        <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-button">LinkedIn</a>
+        <a href="https://github.com/yourusername" target="_blank" class="contact-button">GitHub</a>
       </div>
     </div>
-    <div id="projects" class="projects-section"></div>
+
   </div>
+
   <div id="project-modal" class="modal">
     <div class="modal-content">
       <span class="close">&times;</span>
@@ -70,6 +87,13 @@
       </div>
     </div>
   </div>
+
+  <!--======= Footer =====-->
+
+  <footer class="footer">
+    <p>© Herman Justino 2024</p>
+  </footer>
+
   <canvas id="neural-network"></canvas>
   <div class="toggle-container">
     <input type="checkbox" id="toggle-mode" class="toggle-switch">

@@ -213,7 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('project-modal').style.display = "none";
 });
 
-// Update the generateProjectCards function to add click event listeners
+// Update the generateProjectCards function to call adjustLayout after rendering projects
 function generateProjectCards(filteredProjects) {
   const projectsSection = document.getElementById('projects');
   projectsSection.innerHTML = ''; // Clear existing projects
