@@ -1,39 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Interactive Neural Network Background</title>
+  <title>Herman Justino - Portfolio</title>
   <link rel="stylesheet" href="./styles/styles.css">
 </head>
+
 <body class="dark-mode">
   <nav class="navbar">
     <div class="navbar-left">
-      <a href="#" class="navbar-item">Home</a>
+      <a href="#home" class="navbar-item">Home</a>
     </div>
     <div class="navbar-right">
-      <a href="#" class="navbar-item">About</a>
-      <a href="#" class="navbar-item">Projects</a>
-      <a href="#" class="navbar-item">Contact</a>
+      <a href="#portfolio" class="navbar-item">Projects</a>
+      <a href="#contact" class="navbar-item">Contact</a>
     </div>
   </nav>
   <div class="center-content">
-    <h1>Herman Justino</h1>
-    <hr>
-    <div class="social-links">
-      <a href="https://github.com/yourusername" target="_blank">
-        <img src="./assets/github-dark.svg" alt="GitHub" class="icon">
-      </a>
-      <a href="https://linkedin.com/in/yourusername" target="_blank">
-        <img src="./assets/linkedin-dark.svg" alt="LinkedIn" class="icon">
-      </a>
+    <div class="bio-container" id="home">
+      <div class="bio">
+        <h1>Herman Justino</h1>
+        <hr>
+        <div class="social-links">
+          <a href="https://github.com/yourusername" target="_blank">
+            <img src="./assets/github-dark.svg" alt="GitHub" class="icon">
+          </a>
+          <a href="https://linkedin.com/in/yourusername" target="_blank">
+            <img src="./assets/linkedin-dark.svg" alt="LinkedIn" class="icon">
+          </a>
+        </div>
+        <p class="bio-paragraph">I am a master's student specializing in data science. My passion
+          lies in uncovering insights from data and applying machine learning
+          techniques to solve real-world problems. I have experience in various
+          data science tools and technologies, and I am always eager to learn and
+          explore new advancements in the field.</p>
+      </div>
     </div>
-    <p class="bio-paragraph">I am a master's student specializing in data science. My passion 
-      lies in uncovering insights from data and applying machine learning 
-      techniques to solve real-world problems. I have experience in various 
-      data science tools and technologies, and I am always eager to learn and 
-      explore new advancements in the field.</p>
-    <h1>Portfolio</h1>
+    <h1 id="portfolio">Portfolio</h1>
     <h3>Some of the projects I've been working on</h3>
     <div class="filter-bar">
       <div class="tabs">
@@ -49,6 +54,22 @@
     </div>
     <div id="projects" class="projects-section"></div>
   </div>
+  <div id="project-modal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h1 id="modal-title"></h1> <!-- Title of the project -->
+      <img id="modal-primary-image" src="" alt="Primary Image">
+      <h2 id="modal-headline"></h2>
+      <a id="modal-app-link" href="#" target="_blank">View App</a>
+      <p id="modal-description"></p>
+      <img id="modal-secondary-image" src="" alt="Secondary Image">
+      <div class="read-more">
+        <a id="modal-github-link" href="#" target="_blank">GitHub</a>
+        <a id="modal-notebook-link" href="#" target="_blank">Notebook</a>
+        <a id="modal-app-link-bottom" href="#" target="_blank">View App</a>
+      </div>
+    </div>
+  </div>
   <canvas id="neural-network"></canvas>
   <div class="toggle-container">
     <input type="checkbox" id="toggle-mode" class="toggle-switch">
@@ -57,4 +78,5 @@
   <script src="./scripts/neural-network.js"></script>
   <script src="./scripts/projects.js"></script>
 </body>
+
 </html>

@@ -2,7 +2,7 @@
 body, html {
   margin: 0;
   overflow-x: hidden; /* Prevent horizontal overflow */
-  overflow-y: auto;
+  overflow-y: hidden;
   width: 100%;
   height: 100%;
   transition: background-color 0.3s;
@@ -10,6 +10,7 @@ body, html {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  font-family: 'Consolas', monospace;
 }
 
 canvas {
@@ -38,8 +39,9 @@ body.light-mode {
   justify-content: space-between;
   padding: 10px 20px;
   box-sizing: border-box; /* Ensure padding is included in the width */
-  z-index: 10;
+  z-index: 1;
   transition: background-color 0.3s;
+  margin-bottom: 10px;
 }
 
 .navbar-item {
@@ -72,12 +74,12 @@ body.light-mode .navbar-item:hover {
   text-align: center;
   width: 70%;
   color: #fff;
-  max-height: 100vh;
+  height: 100vh;
   background: rgba(0, 0, 0, 0.5); /* Translucent background */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for lifted effect */
-  padding-top: 120px; /* Adjust top padding */
   border-radius: 10px;
-  margin: 10px;
+  margin-top: 50px;
+  margin-bottom: 5px;
   z-index: 1;
   overflow-y: auto;
   overflow-x: hidden;
@@ -125,8 +127,29 @@ body.light-mode .center-content hr {
   border-color: #111;
 }
 
+.bio-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* Full viewport height */
+  width: 100%;
+  margin-top: 80vh; /* Adjust margin top */
+}
+
+.bio {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
 .bio-paragraph {
   width: 50%;
+}
+
+#portfolio{
+  padding-top: 20px;
 }
 
 .toggle-container {
@@ -144,7 +167,7 @@ body.light-mode .center-content hr {
   display: inline-block;
   width: 60px;
   height: 30px;
-  background-color: #ccc;
+  background-color: #8d8d8d;
   border-radius: 15px;
   position: relative;
   cursor: pointer;
@@ -171,7 +194,6 @@ body.light-mode .center-content hr {
   transform: translateX(30px);
 }
 
-
 .projects-section {
   padding: 20px;
   display: flex;
@@ -184,22 +206,39 @@ body.light-mode .center-content hr {
 }
 
 .project-card {
-  background-color: #222;
-  color: #fff;
-  padding: 20px;
+  position: relative;
+  width: 300px; /* Adjust as needed */
+  height: 200px; /* Adjust as needed */
+  overflow: hidden;
   border-radius: 10px;
-  max-width: 25%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
   transition: transform 0.3s;
-
 }
 
 .project-card:hover {
   transform: scale(1.05);
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: 10px;
+}
+
 .project-card img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   border-radius: 10px;
 }
 
@@ -214,6 +253,19 @@ body.light-mode .center-content hr {
 .project-card .tools {
   list-style: none;
   padding: 0;
+}
+
+.project-card:hover .overlay {
+  opacity: 1;
+}
+
+.overlay-content {
+  text-align: center;
+}
+
+.overlay-content h2 {
+  margin: 0;
+  font-size: 24px;
 }
 
 .project-card .tools li {
@@ -249,9 +301,9 @@ body.light-mode .project-card .links a {
     background: none; /* Remove background on mobile */
     box-shadow: none; /* Remove box shadow on mobile */
     width: 90%; /* Adjust width on mobile */
-    margin-top: 120px; /* Adjust top margin on mobile */
+    margin-top: 50px; /* Adjust margin top on mobile */
     padding-top: 20px; /* Add padding to the top */
-    padding-bottom: 20px; /* Add padding to the bottom */
+    padding-bottom: 5px; /* Add padding to the bottom */
   }
 
   body.light-mode .center-content {
@@ -259,7 +311,15 @@ body.light-mode .project-card .links a {
     box-shadow: none; /* Remove box shadow in light mode on mobile */
   }
 
-  .project-card{
+
+  .bio-container{
+    margin-top: 80vh;
+  }
+
+  .bio-paragraph {
+    width: 90%;
+}
+  .project-card {
     max-width: 80%;
   }
 
@@ -267,7 +327,6 @@ body.light-mode .project-card .links a {
     margin-left: 0;
     margin-right: 0;
   }
-  
 }
 
 .filter-bar {
@@ -302,10 +361,9 @@ body.light-mode .project-card .links a {
 }
 
 body.dark-mode .tab-button.active {
-  background-color:  #444;
+  background-color: #444;
   color: #fff;
 }
-
 
 .tab-content {
   display: flex;
@@ -346,24 +404,110 @@ body.light-mode .tab-content {
   color: #000000;
 }
 
-body.light-mode .tab-button{
+body.light-mode .tab-button {
   background-color: #111;
   color: #ddd;
 }
-body.light-mode .tab-button.active{
+
+body.light-mode .tab-button.active {
   background-color: #ddd;
   color: #111;
 }
-
 
 body.light-mode .filter-option {
   background-color: #ddd;
   color: #111;
 }
 
-
 body.light-mode .filter-option.active,
 body.light-mode .filter-option:hover {
   background-color: #444;
   color: #fff;
+}
+
+/* Add this to your styles.css file */
+.modal {
+  display: none;/* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 100; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100vh; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 0 auto; /* Center horizontally */
+  margin-top: 20px; /* Adjust top margin */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  max-width: 600px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow-y: scroll;
+}
+
+body.dark-mode .modal-content {
+  background-color: #333; /* Dark mode background color */
+  color: #fff; /* Dark mode text color */
+  border: 1px solid #555; /* Dark mode border color */
+}
+
+.close {
+  color: #aaa;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+body.dark-mode .close {
+  color: #fff; /* Dark mode close button color */
+}
+
+body.dark-mode .close:hover,
+body.dark-mode .close:focus {
+  color: #bbb; /* Dark mode close button hover color */
+}
+
+.modal img {
+  width: 50%;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.read-more {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+  width: 100%;
+}
+
+.read-more a {
+  color: #1e90ff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.read-more a:hover {
+  text-decoration: underline;
 }

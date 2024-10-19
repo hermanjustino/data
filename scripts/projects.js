@@ -178,7 +178,42 @@ function generateFilterOptions() {
   });
 }
 
-// Function to generate project cards
+// Function to open the modal with project details
+function openModal(project) {
+  document.getElementById('modal-title').textContent = project.name; // Set the title
+  document.getElementById('modal-primary-image').src = project.mainImage;
+  document.getElementById('modal-headline').textContent = project.headline;
+  document.getElementById('modal-app-link').href = project.appLink;
+  document.getElementById('modal-app-link').textContent = "View App";
+  document.getElementById('modal-description').textContent = project.description;
+  document.getElementById('modal-secondary-image').src = project.secondaryImage;
+  document.getElementById('modal-github-link').href = project.githubLink;
+  document.getElementById('modal-notebook-link').href = project.notebookLink;
+  document.getElementById('modal-app-link-bottom').href = project.appLink;
+
+  const modal = document.getElementById('project-modal');
+  modal.style.display = "block";
+}
+
+// Event listener to close the modal
+document.querySelector('.close').addEventListener('click', () => {
+  document.getElementById('project-modal').style.display = "none";
+});
+
+// Event listener to close the modal when clicking outside of it
+window.addEventListener('click', (event) => {
+  const modal = document.getElementById('project-modal');
+  if (event.target === modal) {
+    modal.style.display = "none";
+  }
+});
+
+// Ensure no code is inadvertently setting the modal to be displayed on page load
+document.addEventListener('DOMContentLoaded', () => {
+  document.getElementById('project-modal').style.display = "none";
+});
+
+// Update the generateProjectCards function to add click event listeners
 function generateProjectCards(filteredProjects) {
   const projectsSection = document.getElementById('projects');
   projectsSection.innerHTML = ''; // Clear existing projects
@@ -187,18 +222,14 @@ function generateProjectCards(filteredProjects) {
     projectCard.className = 'project-card';
     projectCard.innerHTML = `
       <img src="${project.mainImage}" alt="${project.name}">
-      <h2>${project.name}</h2>
-      <h3>${project.headline}</h3>
-      <p>${project.description}</p>
-      <ul class="tools">
-        ${project.tools.map(tool => `<li>${tool}</li>`).join('')}
-      </ul>
-      <div class="links">
-        <a href="${project.githubLink}" target="_blank">GitHub</a>
-        <a href="${project.notebookLink}" target="_blank">Notebook</a>
-        <a href="${project.appLink}" target="_blank">App</a>
+      <div class="overlay">
+        <div class="overlay-content">
+          <h2>${project.name}</h2>
+          <h3>${project.headline}</h3>
+        </div>
       </div>
     `;
+    projectCard.addEventListener('click', () => openModal(project));
     projectsSection.appendChild(projectCard);
   });
 }
