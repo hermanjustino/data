@@ -1,0 +1,145 @@
+/* Add this to your nav.css file */
+
+/* Default (dark mode) styles */
+body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    z-index: 1;
+    width: 100%;
+  }
+
+  .brand-icon {
+    width: 50px;
+    height: 50px;
+    display: none; /* Hide by default */
+    margin-left: 20px;
+  }
+  
+  .dark-mode-icon {
+    display: inline-block; /* Show dark mode icon by default */
+  }
+  
+  body.light-mode .dark-mode-icon {
+    display: none; /* Hide dark mode icon in light mode */
+  }
+  
+  body.light-mode .light-mode-icon {
+    display: inline-block; /* Show light mode icon in light mode */
+  }
+  
+  .brand-title a {
+    text-decoration: none; 
+    font-size: 35px;
+    padding: 1rem;
+    margin: .5rem;
+    color: inherit; /* Inherit color from parent */
+    font-weight: 200; 
+  }
+
+  .brand-title a:hover {
+    text-decoration: underline; /* Add underline on hover */
+  }
+  
+  .navbar-links {
+    height: 100%;
+  }
+  
+  .navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li {
+    list-style: none;
+  }
+  
+  .navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+  }
+  
+  .navbar-links li:hover {
+    text-decoration: underline; 
+  }
+  
+  .toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+  }
+  
+  .toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+  }
+  
+  /* Light mode styles */
+  body.light-mode .navbar {
+    background-color: #eeeeee81;
+    color: #111;
+  }
+  
+  body.light-mode .navbar-item {
+    color: #111;
+  }
+  
+  body.light-mode .toggle-button .bar {
+    background-color: #111;
+  }
+  
+  body.light-mode .navbar-links li a {
+    color: #111;
+  }
+  
+  @media (max-width: 800px) {
+    .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      background: rgba(0, 0, 0, 0.5); /* Translucent background */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for lifted effect */
+    }
+  
+    .toggle-button {
+      display: flex;
+    }
+  
+    .navbar-links {
+      display: none;
+      width: 100%;
+    }
+  
+    .navbar-links ul {
+      width: 100%;
+      flex-direction: column;
+    }
+  
+    .navbar-links ul li {
+      text-align: center;
+    }
+  
+    .navbar-links ul li a {
+      padding: .5rem 1rem;
+    }
+  
+    .navbar-links.active {
+      display: flex;
+    }
+  }

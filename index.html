@@ -6,16 +6,29 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Herman Justino - Portfolio</title>
   <link rel="stylesheet" href="./styles/styles.css">
+  <link rel="stylesheet" href="./styles/nav.css">
+
+  <link rel="icon" href="./assets/icon-light-mode.svg?v=1.0" type="image/svg+xml">
+  <link rel="icon" href="./assets/icon-light-mode.svg?v=1.0" type="image/png">
+  <link rel="apple-touch-icon" href="./assets/icon-light-mode.svg?v=1.0">
 </head>
 
 <body class="dark-mode">
   <nav class="navbar">
-    <div class="navbar-left">
-      <a href="#home" class="navbar-item">Home</a>
-    </div>
-    <div class="navbar-right">
-      <a href="#portfolio" class="navbar-item">Projects</a>
-      <a href="#contact" class="navbar-item">Contact</a>
+    <a href="#home" class="navbar-item">
+      <img src="./assets/icon-dark-mode.svg" alt="Dark Mode Icon" class="brand-icon dark-mode-icon">
+      <img src="./assets/icon-light-mode.svg" alt="Light Mode Icon" class="brand-icon light-mode-icon">
+    </a>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="#portfolio">Portfolio</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
     </div>
   </nav>
   <div class="center-content">
@@ -41,34 +54,48 @@
     </div>
 
     <!-- Portfolio Section -->
-<div class="portfolio-container">
-  <h1 id="portfolio">Portfolio</h1>
-  <h3>Some of the projects I've been working on</h3>
-  <div class="filter-bar">
-    <div class="tabs">
-      <button class="tab-button active" data-tab="type">Type</button>
-      <button class="tab-button" data-tab="tools">Tools</button>
+    <div class="portfolio-container">
+      <h1 id="portfolio">Portfolio</h1>
+      <h3>Some of the projects I've been working on</h3>
+      <div class="filter-bar">
+        <div class="tabs">
+          <button class="tab-button active" data-tab="type">Type</button>
+          <button class="tab-button" data-tab="tools">Tools</button>
+        </div>
+        <div class="tab-content" id="type">
+          <!-- Filter options for type will be generated here -->
+        </div>
+        <div class="tab-content" id="tools" style="display: none;">
+          <!-- Filter options for tools will be generated here -->
+        </div>
+      </div>
+      <div id="projects" class="projects-section"></div>
     </div>
-    <div class="tab-content" id="type">
-      <!-- Filter options for type will be generated here -->
-    </div>
-    <div class="tab-content" id="tools" style="display: none;">
-      <!-- Filter options for tools will be generated here -->
-    </div>
-  </div>
-  <div id="projects" class="projects-section"></div>
-</div>
 
     <!-- Contact Section -->
     <div id="contact" class="contact-section">
       <h1>Contact</h1>
-      <p class="contact-paragraph">If you would like to get in touch, feel free to connect with me on LinkedIn or check out my GitHub profile.</p>
+      <p class="contact-paragraph">If you would like to get in touch, feel free to connect with me on LinkedIn or check
+        out my GitHub profile.</p>
       <div class="contact-buttons">
         <a href="https://linkedin.com/in/yourusername" target="_blank" class="contact-button">LinkedIn</a>
         <a href="https://github.com/yourusername" target="_blank" class="contact-button">GitHub</a>
       </div>
     </div>
 
+    <hr>
+
+    <!--Picture and Paragraph Section -->
+    <div class="about-me">
+      <img src="./assets/Herman Justino.webp" alt="Herman Justino" class="about-me-pic">
+      <p class="about-me-paragraph">I'm a digital native with a passion for understanding technology's 
+        impact on society. Born in Angola and a 
+        child of the diaspora, I have always seen technology as a great equalizer. With a background in 
+        full-stack development and a current pursuit of a master's degree in data science, I 
+        dedicated to exploring the ethical implications of AI and the potential of recommender algorithms 
+        to revolutionize industries. My entrepreneurial spirit and experience in both freelancing and 
+        founding a software development firm equip me to contribute innovative solutions to our creative endeavors.</p>
+    </div>
   </div>
 
   <div id="project-modal" class="modal">
@@ -101,6 +128,7 @@
   </div>
   <script src="./scripts/neural-network.js"></script>
   <script src="./scripts/projects.js"></script>
+  <script src="./scripts/nav.js"></script>
 </body>
 
 </html>
