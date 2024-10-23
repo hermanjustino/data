@@ -2,6 +2,7 @@
 
 const projects = [
   {
+    id: 1,
     name: "BASE Repo Initiator",
     headline: "Create an empty HTML project and initialise a local git repository",
     description: `Create an empty HTML project and initialise a local git repository
@@ -14,6 +15,7 @@ BASE gives user an empty html project with css, javascript, and assets folder. Y
     tools: ["Python", "JavaScript", "Git"]
   },
   {
+    id: 2,
     name: "CFC-x-Soho",
     headline: "Information Page for CFC x Soho Toronto 2024",
     description: `Founded in 2019 by Jai Al-Attas & Markie Bryant, the mission of CFC is to unearth and empower the next generation of creative leaders from disenfranchised & impacted communities.`,
@@ -25,6 +27,7 @@ BASE gives user an empty html project with css, javascript, and assets folder. Y
     tools: ["JavaScript", "Git", "CSS"]
   },
   {
+    id: 3,
     name: "Email Newsletter Service",
     headline: "This is a fully customizable Email Newsletter Service",
     description: `Built with modern email protocols
@@ -35,11 +38,11 @@ Full Subscribe, Unsubscribe functions for users`,
     mainImage: "https://github.com/user-attachments/assets/a9329bb7-8a68-487b-bec0-9bb57e78bb75",
     secondaryImage: "https://github.com/user-attachments/assets/b9f599db-649a-4907-a250-9b1a93b62e76",
     githubLink: "https://github.com/hermanjustino/email_newsletter",
-    appLink: "https://applink.com/project3",
     type: "Web Application",
     tools: ["Python", "JavaScript", "stmp", "HTML"]
   },
   {
+    id: 4,
     name: "COVID-19 Data Analysis",
     headline: "This project analyzes COVID-19 data to identify trends and patterns in the spread of the virus",
     description: `This project analyzes COVID-19 data to identify trends and patterns in the spread of the virus, 
@@ -50,11 +53,12 @@ Full Subscribe, Unsubscribe functions for users`,
     mainImage: "https://github.com/user-attachments/assets/b7fe36a0-c3c0-47cf-9d94-940278974eb3",
     secondaryImage: "https://github.com/user-attachments/assets/56813612-4504-4658-9da5-001eae62a8c0",
     githubLink: "https://github.com/hermanjustino/Msc.-DS-Assignment-Repo/tree/main/Covid_19_Data_Analysis",
-    notebookLink: "https://notebooklink.com/project4",
+    notebookLink: "./pages/covid.html",
     type: "Data Science",
     tools: ["R", "ggplot2"]
   },
   {
+    id: 5,
     name: "NYPD Crime Analysis",
     headline: "This project analyzes NYPD crime incident data to identify trends and patterns.",
     description: `The dataset contains historical shooting incident data from the NYPD.
@@ -65,7 +69,7 @@ There is a significant difference in the number of incidents based on victim sex
     mainImage: "https://github.com/user-attachments/assets/a2aaf42f-0339-4fed-9119-4ad74a78a28a",
     secondaryImage: "https://github.com/user-attachments/assets/ffa1ac08-019c-46fc-896e-80ac7bbd74da",
     githubLink: "https://github.com/hermanjustino/Msc.-DS-Assignment-Repo/tree/main/NYPD_crime_statistics_assignment",
-    notebookLink: "https://notebooklink.com/project6",
+    notebookLink: "./pages/nypd_assignment_herman_justino.html",
     type: "Data Science",
     tools: ["Python", "ggplot2", "leaflet"]
   },
@@ -193,8 +197,13 @@ function generateFilterOptions() {
   });
 }
 
-// Function to open the modal with project details
-function openModal(project) {
+// scripts/projects.js
+
+let currentProjectIndex = 0;
+
+function openModal(index) {
+  currentProjectIndex = index;
+  const project = projects[index];
   document.getElementById('modal-title').textContent = project.name; // Set the title
   document.getElementById('modal-primary-image').src = project.mainImage;
   document.getElementById('modal-headline').textContent = project.headline;
@@ -246,10 +255,52 @@ function openModal(project) {
   modal.style.display = "block";
 }
 
-// Event listener to close the modal
-document.querySelector('.close').addEventListener('click', () => {
-  document.getElementById('project-modal').style.display = "none";
+// Function to close the modal
+function closeModal() {
+  const modal = document.getElementById('project-modal');
+  modal.style.display = "none";
+}
+
+// Function to show the next project
+function showNextProject() {
+  currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+  openModal(currentProjectIndex);
+}
+
+// Function to show the previous project
+function showPrevProject() {
+  currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
+  openModal(currentProjectIndex);
+}
+
+// Event listeners for navigation buttons
+document.getElementById('next-arrow').addEventListener('click', showNextProject);
+document.getElementById('prev-arrow').addEventListener('click', showPrevProject);
+document.querySelector('.close').addEventListener('click', closeModal);
+
+// Swipe functionality for mobile
+let touchstartX = 0;
+let touchendX = 0;
+
+const modalContent = document.querySelector('.modal-content');
+
+modalContent.addEventListener('touchstart', (event) => {
+  touchstartX = event.changedTouches[0].screenX;
 });
+
+modalContent.addEventListener('touchend', (event) => {
+  touchendX = event.changedTouches[0].screenX;
+  handleSwipe();
+});
+
+function handleSwipe() {
+  if (touchendX < touchstartX) {
+    showNextProject();
+  }
+  if (touchendX > touchstartX) {
+    showPrevProject();
+  }
+}
 
 // Event listener to close the modal when clicking outside of it
 window.addEventListener('click', (event) => {
@@ -268,7 +319,7 @@ document.addEventListener('DOMContentLoaded', () => {
 function generateProjectCards(filteredProjects) {
   const projectsSection = document.getElementById('projects');
   projectsSection.innerHTML = ''; // Clear existing projects
-  filteredProjects.forEach(project => {
+  filteredProjects.forEach((project, index) => {
     const projectCard = document.createElement('div');
     projectCard.className = 'project-card';
     projectCard.innerHTML = `
@@ -280,7 +331,7 @@ function generateProjectCards(filteredProjects) {
         </div>
       </div>
     `;
-    projectCard.addEventListener('click', () => openModal(project));
+    projectCard.addEventListener('click', () => openModal(index));
     projectsSection.appendChild(projectCard);
   });
 }

@@ -448,6 +448,49 @@ body.light-mode .filter-option:hover {
   overflow-x: none;
 }
 
+/* Add this to your styles.css file */
+
+.nav-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 50px;
+  display: none; /* Hide by default */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: transparent;
+}
+
+.nav-arrow:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+.prev-arrow {
+  left: 10%;
+}
+
+.next-arrow {
+  right: 10%;
+}
+
+@media (min-width: 780px) {
+  .nav-arrow {
+    display: block; /* Show on desktop */
+  }
+}
+
+/* Dark mode styles */
+body.dark-mode .nav-arrow {
+  color: #ccc; /* Adjust arrow color for dark mode */
+  box-shadow: 0 4px 8px rgba(255, 255, 255, 0.2);
+}
+
+body.dark-mode .nav-arrow:hover {
+  box-shadow: 0 6px 12px rgba(255, 255, 255, 0.4);
+}
+
 /* Project Modal */
 .modal-content h2 {
   font-size: 20px; /* Decrease font size for the headline */
