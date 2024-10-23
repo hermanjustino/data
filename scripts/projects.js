@@ -51,7 +51,6 @@ Full Subscribe, Unsubscribe functions for users`,
     secondaryImage: "https://github.com/user-attachments/assets/56813612-4504-4658-9da5-001eae62a8c0",
     githubLink: "https://github.com/hermanjustino/Msc.-DS-Assignment-Repo/tree/main/Covid_19_Data_Analysis",
     notebookLink: "https://notebooklink.com/project4",
-    appLink: "https://applink.com/project4",
     type: "Data Science",
     tools: ["R", "ggplot2"]
   },
@@ -273,7 +272,7 @@ function generateProjectCards(filteredProjects) {
     const projectCard = document.createElement('div');
     projectCard.className = 'project-card';
     projectCard.innerHTML = `
-      <img src="${project.mainImage}" alt="${project.name}">
+      <img src="${project.mainImage}" alt="${project.name}" loading="lazy">
       <div class="overlay">
         <div class="overlay-content">
           <h2>${project.name}</h2>
