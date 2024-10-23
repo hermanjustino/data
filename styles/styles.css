@@ -124,7 +124,7 @@ body.light-mode .center-content hr {
 }
 
 #portfolio{
-  padding-top: 40px;
+  padding-top: 10px;
 }
 
 .toggle-container {
@@ -513,6 +513,33 @@ body.dark-mode .close:focus {
 
 .read-more a:hover {
   text-decoration: underline;
+}
+
+.modal .modal-link {
+  display: inline-block;
+  padding: 10px 20px;
+  border: 2px solid #1e1e1e;
+  color: #1e1e1e;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
+  margin: 5px; /* Add margin for spacing */
+}
+
+.modal .modal-link:hover {
+  background-color: #1e1e1e;
+  color: #fff;
+}
+
+body.dark-mode .modal .modal-link {
+  border-color: #fff;
+  color: #fff;
+}
+
+body.dark-mode .modal .modal-link:hover {
+  background-color: #fff;
+  color: #1e1e1e;
 }
 
 /*============ Contact Section ============*/

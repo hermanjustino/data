@@ -7,8 +7,8 @@ const projects = [
     description: `Create an empty HTML project and initialise a local git repository
 
 BASE gives user an empty html project with css, javascript, and assets folder. You can alter js and css right out of the box.`,
-    mainImage: "https://private-user-images.githubusercontent.com/46625107/305748871-cdefbb00-3226-46d8-b9e4-ae10ddb4613f.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk0NTYxODMsIm5iZiI6MTcyOTQ1NTg4MywicGF0aCI6Ii80NjYyNTEwNy8zMDU3NDg4NzEtY2RlZmJiMDAtMzIyNi00NmQ4LWI5ZTQtYWUxMGRkYjQ2MTNmLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDIwVDIwMjQ0M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTA1MGRlYmJiYmNlNTJlZjU2OTY2YWEyNGFkMWY2M2ZlYjk2YWNkYzU4ZTg0NzBhZTg2MjVkOTYxOThiMjdlMjYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.ZaduF3kXqzexvbG5EPaPlBUGc5q8lAnhE60pmZ3YCY4",
-    secondaryImage: "https://private-user-images.githubusercontent.com/46625107/378222942-b32ebaf7-1a74-47b8-812f-1973e2546855.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk0NTYxODMsIm5iZiI6MTcyOTQ1NTg4MywicGF0aCI6Ii80NjYyNTEwNy8zNzgyMjI5NDItYjMyZWJhZjctMWE3NC00N2I4LTgxMmYtMTk3M2UyNTQ2ODU1LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDIwVDIwMjQ0M1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTEzM2Y0MWExOTI3M2U4NTkxNmI3ZjM1MjI5ZTgyNzM1OTc5MTM1ZGE1NTk2YjA2MzRlMTQ4OTVlNDViMjRjNzMmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.OEDVP0dO4IHvHqaCKBDegoBBpq2kzdZC7Z-xmCYQQGg",
+    mainImage: "https://github.com/hermanjustino/BASE/assets/46625107/cdefbb00-3226-46d8-b9e4-ae10ddb4613f",
+    secondaryImage: "https://github.com/user-attachments/assets/b32ebaf7-1a74-47b8-812f-1973e2546855",
     githubLink: "https://github.com/hermanjustino/BASE/tree/main",
     type: "Python Script",
     tools: ["Python", "JavaScript", "Git"]
@@ -17,13 +17,12 @@ BASE gives user an empty html project with css, javascript, and assets folder. Y
     name: "CFC-x-Soho",
     headline: "Information Page for CFC x Soho Toronto 2024",
     description: `Founded in 2019 by Jai Al-Attas & Markie Bryant, the mission of CFC is to unearth and empower the next generation of creative leaders from disenfranchised & impacted communities.`,
-    mainImage: "https://private-user-images.githubusercontent.com/46625107/378223325-d740e304-7263-4a67-a77a-5f72aa4e1962.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk0NTc3MjIsIm5iZiI6MTcyOTQ1NzQyMiwicGF0aCI6Ii80NjYyNTEwNy8zNzgyMjMzMjUtZDc0MGUzMDQtNzI2My00YTY3LWE3N2EtNWY3MmFhNGUxOTYyLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDIwVDIwNTAyMlomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWEwNGZkOTUzZGNhMzY2Y2U4YWI0YTYwNTQzNzlhZmNhODZiZjkwYTI4ZTc4NDAzMzQyZmRhYjA1YTk3ZmI4N2EmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.dMezIyJEqfGg8TkdbCYsC6BYgW29AiWTDU-TpogyyE4",
-    secondaryImage: "https://private-user-images.githubusercontent.com/46625107/378224385-93f7a0f1-7e5e-4fca-af36-7867cefa6c90.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk0NTkxOTgsIm5iZiI6MTcyOTQ1ODg5OCwicGF0aCI6Ii80NjYyNTEwNy8zNzgyMjQzODUtOTNmN2EwZjEtN2U1ZS00ZmNhLWFmMzYtNzg2N2NlZmE2YzkwLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDIwVDIxMTQ1OFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTM4NDEwNmNjMzgxNmY0ODFjMGIwMTllOTc0MWFiNjdhZDY2MGY0Njg5NjljYTNlY2U0NmM3ODZlMThkMjZiNzUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.g1RqifOYH-eR5Gp9bHQKmvK6Ud1IelqqQ7Z-jXmSfT0",
+    mainImage: "https://github.com/user-attachments/assets/d740e304-7263-4a67-a77a-5f72aa4e1962",
+    secondaryImage: "https://github.com/user-attachments/assets/93f7a0f1-7e5e-4fca-af36-7867cefa6c90",
     githubLink: "https://github.com/hermanjustino/CFC-x-Soho/tree/main",
-    notebookLink: "https://notebooklink.com/project2",
     appLink: "https://hermanjustino.github.io/CFC-x-Soho/",
     type: "Web Application",
-    tools: ["Python", "Pandas", "NumPy"]
+    tools: ["JavaScript", "Git", "CSS"]
   },
   {
     name: "Email Newsletter Service",
@@ -33,13 +32,12 @@ BASE gives user an empty html project with css, javascript, and assets folder. Y
 Customize frequency, set automatic emails
 
 Full Subscribe, Unsubscribe functions for users`,
-    mainImage: "https://private-user-images.githubusercontent.com/46625107/378223875-a9329bb7-8a68-487b-bec0-9bb57e78bb75.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk0NTc4NTQsIm5iZiI6MTcyOTQ1NzU1NCwicGF0aCI6Ii80NjYyNTEwNy8zNzgyMjM4NzUtYTkzMjliYjctOGE2OC00ODdiLWJlYzAtOWJiNTdlNzhiYjc1LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDIwVDIwNTIzNFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTUzOWQxZmI4MmYzNzAxODcwMGViNDg5MmExOTkyMDFlZjJmZTA2YzdmNjBmMmQzNTEwYmQ0NDU5MTVjY2RiZjQmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.7BXBZWoMKIDP_rA2GVXr81eHL0EzFS8-npiUVAAfS-s",
-    secondaryImage: "https://private-user-images.githubusercontent.com/46625107/378223888-b9f599db-649a-4907-a250-9b1a93b62e76.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk0NTkxNjEsIm5iZiI6MTcyOTQ1ODg2MSwicGF0aCI6Ii80NjYyNTEwNy8zNzgyMjM4ODgtYjlmNTk5ZGItNjQ5YS00OTA3LWEyNTAtOWIxYTkzYjYyZTc2LmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDIwVDIxMTQyMVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTRkN2JlMTdiZDM4MDE0ZDhkNzA1OTE3NmNmYTA2NDM4Y2UzNjJlZTFlMjEyMTJkNzcyZDdmNmE5ZjBjODZlZDAmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.FO_LHtMVzPcw7-anoc82oGSz5QvdgJ7J9Y9rLcOb95M",
+    mainImage: "https://github.com/user-attachments/assets/a9329bb7-8a68-487b-bec0-9bb57e78bb75",
+    secondaryImage: "https://github.com/user-attachments/assets/b9f599db-649a-4907-a250-9b1a93b62e76",
     githubLink: "https://github.com/hermanjustino/email_newsletter",
-    notebookLink: "https://notebooklink.com/project3",
     appLink: "https://applink.com/project3",
     type: "Web Application",
-    tools: ["Python", "JavaScript", "data", "stmp", "HTML"]
+    tools: ["Python", "JavaScript", "stmp", "HTML"]
   },
   {
     name: "COVID-19 Data Analysis",
@@ -49,8 +47,8 @@ Full Subscribe, Unsubscribe functions for users`,
     
     The dataset contains COVID-19 case numbers, deaths, recoveries, and other relevant metrics. The data is 
     sourced from Johns Hopkins University and other reliable sources.`,
-    mainImage: "https://private-user-images.githubusercontent.com/46625107/378224775-b7fe36a0-c3c0-47cf-9d94-940278974eb3.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk0NTgzNDEsIm5iZiI6MTcyOTQ1ODA0MSwicGF0aCI6Ii80NjYyNTEwNy8zNzgyMjQ3NzUtYjdmZTM2YTAtYzNjMC00N2NmLTlkOTQtOTQwMjc4OTc0ZWIzLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDIwVDIxMDA0MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTdjYmI4NThmMjQyMzM4YmE2ZDY3MjhmOWQ3YmUwM2Y1NTc1NGZjMzQ2NzMwNzVhZTkyZTMxNjg3MzAyNDBmOWImWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.qtWlnvMWbpFK7RMLf8aHm9_vy2NtskSrmCK16t3kRH4",
-    secondaryImage: "https://private-user-images.githubusercontent.com/46625107/378224786-56813612-4504-4658-9da5-001eae62a8c0.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk0NTkyNTEsIm5iZiI6MTcyOTQ1ODk1MSwicGF0aCI6Ii80NjYyNTEwNy8zNzgyMjQ3ODYtNTY4MTM2MTItNDUwNC00NjU4LTlkYTUtMDAxZWFlNjJhOGMwLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDIwVDIxMTU1MVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWJiY2NhOTNhMGM3OWNhMzAyMjg1NDYwNjE5OTM3OGU1YzU4YWFkYThhZWU4MDdlNWNjZDRmZGRjOWUwNTU1ZTEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.-YKAP2tzyzFrmPgYf-EEi2cawihIfXeHpilE5Pu9j_k",
+    mainImage: "https://github.com/user-attachments/assets/b7fe36a0-c3c0-47cf-9d94-940278974eb3",
+    secondaryImage: "https://github.com/user-attachments/assets/56813612-4504-4658-9da5-001eae62a8c0",
     githubLink: "https://github.com/hermanjustino/Msc.-DS-Assignment-Repo/tree/main/Covid_19_Data_Analysis",
     notebookLink: "https://notebooklink.com/project4",
     appLink: "https://applink.com/project4",
@@ -65,11 +63,10 @@ Full Subscribe, Unsubscribe functions for users`,
 
 Most incidents occur in specific boroughs.
 There is a significant difference in the number of incidents based on victim sex.`,
-    mainImage: "https://private-user-images.githubusercontent.com/46625107/378224973-a2aaf42f-0339-4fed-9119-4ad74a78a28a.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk0NTkwMTksIm5iZiI6MTcyOTQ1ODcxOSwicGF0aCI6Ii80NjYyNTEwNy8zNzgyMjQ5NzMtYTJhYWY0MmYtMDMzOS00ZmVkLTkxMTktNGFkNzRhNzhhMjhhLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDIwVDIxMTE1OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTk0N2Q5MmM5OTA1OGMxNDdmMjVmYjgzMzg4ODVjODZjM2JhYmQxZDNiMjdjM2I1NzE5ODgxYTA1MjM2ZDQwZGUmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.jXRg8gW5P1r8_boD1Aro1g36Wa3kLx76MlImnggmn2o",
-    secondaryImage: "https://private-user-images.githubusercontent.com/46625107/378224964-ffa1ac08-019c-46fc-896e-80ac7bbd74da.jpg?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3Mjk0NTkwMTksIm5iZiI6MTcyOTQ1ODcxOSwicGF0aCI6Ii80NjYyNTEwNy8zNzgyMjQ5NjQtZmZhMWFjMDgtMDE5Yy00NmZjLTg5NmUtODBhYzdiYmQ3NGRhLmpwZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEwMjAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMDIwVDIxMTE1OVomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWExNDJjNTQyZjc5YzNiODAwM2RkMGVlZGRjOGJlMDQxZmQ5YTljNTA5NThiZWJlNGY0YTViMmViOGNmOTZiYWYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.ZSqZJ396SXlO5Sotxmw3M2P-2Z3_gpqOlR2Ai--QoDI",
+    mainImage: "https://github.com/user-attachments/assets/a2aaf42f-0339-4fed-9119-4ad74a78a28a",
+    secondaryImage: "https://github.com/user-attachments/assets/ffa1ac08-019c-46fc-896e-80ac7bbd74da",
     githubLink: "https://github.com/hermanjustino/Msc.-DS-Assignment-Repo/tree/main/NYPD_crime_statistics_assignment",
     notebookLink: "https://notebooklink.com/project6",
-    appLink: "https://applink.com/project6",
     type: "Data Science",
     tools: ["Python", "ggplot2", "leaflet"]
   },
@@ -202,13 +199,49 @@ function openModal(project) {
   document.getElementById('modal-title').textContent = project.name; // Set the title
   document.getElementById('modal-primary-image').src = project.mainImage;
   document.getElementById('modal-headline').textContent = project.headline;
-  document.getElementById('modal-app-link').href = project.appLink;
-  document.getElementById('modal-app-link').textContent = "View App";
   document.getElementById('modal-description').textContent = project.description;
   document.getElementById('modal-secondary-image').src = project.secondaryImage;
-  document.getElementById('modal-github-link').href = project.githubLink;
-  document.getElementById('modal-notebook-link').href = project.notebookLink;
-  document.getElementById('modal-app-link-bottom').href = project.appLink;
+
+  // Conditionally include the app link
+  const appLinkElement = document.getElementById('modal-app-link');
+  if (project.appLink) {
+    appLinkElement.href = project.appLink;
+    appLinkElement.textContent = "View App";
+    appLinkElement.classList.add('modal-link'); // Add the modal-link class
+    appLinkElement.style.display = "inline-block"; // Ensure the link is visible
+  } else {
+    appLinkElement.style.display = "none"; // Hide the link if not present
+  }
+
+  // Conditionally include the GitHub link
+  const githubLinkElement = document.getElementById('modal-github-link');
+  if (project.githubLink) {
+    githubLinkElement.href = project.githubLink;
+    githubLinkElement.classList.add('modal-link'); // Add the modal-link class
+    githubLinkElement.style.display = "inline-block"; // Ensure the link is visible
+  } else {
+    githubLinkElement.style.display = "none"; // Hide the link if not present
+  }
+
+  // Conditionally include the notebook link
+  const notebookLinkElement = document.getElementById('modal-notebook-link');
+  if (project.notebookLink) {
+    notebookLinkElement.href = project.notebookLink;
+    notebookLinkElement.classList.add('modal-link'); // Add the modal-link class
+    notebookLinkElement.style.display = "inline-block"; // Ensure the link is visible
+  } else {
+    notebookLinkElement.style.display = "none"; // Hide the link if not present
+  }
+
+  // Conditionally include the bottom app link
+  const appLinkBottomElement = document.getElementById('modal-app-link-bottom');
+  if (project.appLink) {
+    appLinkBottomElement.href = project.appLink;
+    appLinkBottomElement.classList.add('modal-link'); // Add the modal-link class
+    appLinkBottomElement.style.display = "inline-block"; // Ensure the link is visible
+  } else {
+    appLinkBottomElement.style.display = "none"; // Hide the link if not present
+  }
 
   const modal = document.getElementById('project-modal');
   modal.style.display = "block";
