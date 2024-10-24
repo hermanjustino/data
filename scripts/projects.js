@@ -286,19 +286,26 @@ const modalContent = document.querySelector('.modal-content');
 
 modalContent.addEventListener('touchstart', (event) => {
   touchstartX = event.changedTouches[0].screenX;
+  touchstartY = event.changedTouches[0].screenY; // Track vertical touch position
 });
 
 modalContent.addEventListener('touchend', (event) => {
   touchendX = event.changedTouches[0].screenX;
+  touchendY = event.changedTouches[0].screenY; // Track vertical touch position
   handleSwipe();
 });
 
 function handleSwipe() {
-  if (touchendX < touchstartX) {
-    showNextProject();
-  }
-  if (touchendX > touchstartX) {
-    showPrevProject();
+  const horizontalSwipeDistance = touchendX - touchstartX;
+  const verticalSwipeDistance = touchendY - touchstartY;
+
+  if (Math.abs(horizontalSwipeDistance) > Math.abs(verticalSwipeDistance)) {
+    if (horizontalSwipeDistance < 0) {
+      showNextProject();
+    }
+    if (horizontalSwipeDistance > 0) {
+      showPrevProject();
+    }
   }
 }
 

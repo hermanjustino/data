@@ -341,6 +341,7 @@ body.light-mode .project-card .links a {
   transition: background-color 0.3s, color 0.3s;
   position: relative;
   top: 1px;
+  font-size: 16px;
 }
 
 .tab-button.active {
@@ -381,6 +382,7 @@ body.light-mode .tab-content {
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s;
+  font-size: 16px; 
 }
 
 .filter-option.active {
@@ -752,6 +754,16 @@ body.light-mode .footer {
   line-height: 1.6;
   width: 40%;
   text-align: left;
+}
+
+.about-me-paragraph a {
+  color: inherit;
+  font-weight: bold; /* Make the text bolder */
+  text-decoration: none;
+}
+
+.about-me-paragraph a:hover {
+  text-decoration: underline;
 }
 
 @media (max-width: 768px) {
