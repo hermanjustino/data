@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Herman - Data Scientist</title>
+  <link rel="stylesheet" href="../styles/info.css">
+  <link rel="stylesheet" href="../styles/nav.css">
+  <link rel="stylesheet" href="../styles/styles.css">
+</head>
+
+<body class="dark-mode">
+  <nav class="navbar">
+    <a href="#home" class="navbar-item">
+      <img src="../assets/icon-dark-mode.svg" alt="Dark Mode Icon" class="brand-icon dark-mode-icon">
+      <img src="../assets/icon-light-mode.svg" alt="Light Mode Icon" class="brand-icon light-mode-icon">
+    </a>
+    <a href="#" class="toggle-button">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </a>
+    <div class="navbar-links">
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#portfolio">Portfolio</a></li>
+        <li><a href="../index.html#contact">Contact/About</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="controls">
+    <select id="infographicSelector">
+      <option value="https://www.canva.com/design/DAGU43-1mVw/MyVLB1sU2WV66N2P_7ZFrw/view?embed">Social Engineering</option>
+      <option value="https://www.canva.com/design/DAGU-rjQSvs/zoTy5aChFdmB9Wx6EBMdfw/view?embed">Cryptography Demystified</option>
+      <!-- Add more options as needed -->
+    </select>
+  </div>
+
+  <div class="container">
+    <iframe id="infographicFrame" loading="lazy" allowfullscreen="allowfullscreen" allow="fullscreen"></iframe>
+  </div>
+
+  <!--======= Footer =====-->
+
+  <footer class="footer">
+    <p>© Herman Justino 2024</p>
+  </footer>
+
+  <canvas id="neural-network"></canvas>
+  <script src="../scripts/nav.js"></script>
+  <script src="../scripts/neural-network.js"></script>
+  <script>
+    document.getElementById('infographicSelector').addEventListener('change', function () {
+      const selectedValue = this.value;
+      document.getElementById('infographicFrame').src = selectedValue;
+    });
+
+    // Set initial iframe source
+    document.getElementById('infographicFrame').src = document.getElementById('infographicSelector').value;
+  </script>
+</body>
+</html>
