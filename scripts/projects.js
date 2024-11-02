@@ -174,36 +174,31 @@ function generateFilterOptions() {
     option.addEventListener('click', () => {
       const filterType = document.querySelector('.tab-button.active').getAttribute('data-tab');
       const filterValue = option.getAttribute('data-filter');
-
+  
       if (filterType === 'tools') {
         if (filterValue === 'all') {
           document.querySelectorAll('.tab-content#tools .filter-option').forEach(opt => opt.classList.remove('active'));
           option.classList.add('active');
         } else {
-          if (option.classList.contains('active')) {
-            option.classList.remove('active');
-          } else {
-            option.classList.add('active');
-          }
+          option.classList.toggle('active');
           document.querySelector('.tab-content#tools .filter-option[data-filter="all"]').classList.remove('active');
         }
       } else {
         document.querySelectorAll('.tab-content#type .filter-option').forEach(opt => opt.classList.remove('active'));
         option.classList.add('active');
       }
-
+  
       filterProjects();
     });
   });
 }
 
-// scripts/projects.js
-
 let currentProjectIndex = 0;
+let filteredProjects = projects;
 
 function openModal(index) {
   currentProjectIndex = index;
-  const project = projects[index];
+  const project = filteredProjects[index];
   document.getElementById('modal-title').textContent = project.name; // Set the title
   document.getElementById('modal-primary-image').src = project.mainImage;
   document.getElementById('modal-headline').textContent = project.headline;
@@ -261,15 +256,14 @@ function closeModal() {
   modal.style.display = "none";
 }
 
-// Function to show the next project
 function showNextProject() {
-  currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+  currentProjectIndex = (currentProjectIndex + 1) % filteredProjects.length;
   openModal(currentProjectIndex);
 }
 
 // Function to show the previous project
 function showPrevProject() {
-  currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
+  currentProjectIndex = (currentProjectIndex - 1 + filteredProjects.length) % filteredProjects.length;
   openModal(currentProjectIndex);
 }
 
@@ -355,7 +349,7 @@ function filterProjects() {
   const filterType = activeType ? activeType.getAttribute('data-filter') : 'all';
   const filterTools = Array.from(activeTools).map(tool => tool.getAttribute('data-filter'));
 
-  const filteredProjects = projects.filter(project => {
+  filteredProjects = projects.filter(project => {
     const typeMatch = filterType === 'all' || project.type === filterType;
     const toolsMatch = filterTools.length === 0 || filterTools.includes('all') || filterTools.some(tool => project.tools.includes(tool));
     return typeMatch && toolsMatch;
