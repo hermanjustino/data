@@ -65,10 +65,25 @@
     document.getElementById('infographicSelector').addEventListener('change', function () {
       const selectedValue = this.value;
       document.getElementById('infographicFrame').src = selectedValue;
+      updateURL(selectedValue);
     });
 
-    // Set initial iframe source
-    document.getElementById('infographicFrame').src = document.getElementById('infographicSelector').value;
+    // Set initial iframe source based on URL parameter
+    const urlParams = new URLSearchParams(window.location.search);
+    const initialInfographic = urlParams.get('infographic');
+    if (initialInfographic) {
+      document.getElementById('infographicFrame').src = initialInfographic;
+      document.getElementById('infographicSelector').value = initialInfographic;
+    } else {
+      const defaultInfographic = document.getElementById('infographicSelector').value;
+      document.getElementById('infographicFrame').src = defaultInfographic;
+    }
+
+    function updateURL(infographic) {
+      const url = new URL(window.location);
+      url.searchParams.set('infographic', infographic);
+      window.history.pushState({}, '', url);
+    }
   </script>
 </body>
 </html>
