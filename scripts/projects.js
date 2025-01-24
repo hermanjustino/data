@@ -101,8 +101,8 @@ There is a significant difference in the number of incidents based on victim sex
     name: "Cryptography Demistified",
     headline: "Basics of Cryptography",
     description: `Cryptography protects data from unauthorized access by encrypting (scrambling) and decrypting (unscrambling) messages.`,
-    mainImage: "https://media.licdn.com/dms/image/v2/D4E22AQHZbepX9ZQoUA/feedshare-shrink_1280/feedshare-shrink_1280/0/1730151168943?e=1740614400&v=beta&t=wf4dh6sEslWnHtrk6oLIHFGWnjJCTvImlRbkMNo-i04",
-    secondaryImage: "https://media.licdn.com/dms/image/v2/D4E22AQGekFRxVGBuwQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1730151169038?e=1740614400&v=beta&t=-rQ2oC3youTLBzFEx7RXA_8Q8llQl963ie1jeKJ1t9Y",
+    mainImage: "https://github.com/user-attachments/assets/1fc0da80-949f-4dbb-8547-ecd2d18a5f09",
+    secondaryImage: "https://github.com/user-attachments/assets/5c075a48-f66e-499e-8508-bf10d3a9c45e",
     appLink: "https://www.canva.com/design/DAGU-rjQSvs/zoTy5aChFdmB9Wx6EBMdfw/view?embed",
     type: "Presentation",
     tools: ["HTML", "JavaScript"]
