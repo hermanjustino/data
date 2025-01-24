@@ -73,6 +73,18 @@ There is a significant difference in the number of incidents based on victim sex
     type: "Data Science",
     tools: ["Python", "ggplot2", "leaflet"]
   },
+  {
+    id: 6,
+    name: "Pedalling Through Policy",
+    headline: "A Data-Driven Look at Toronto’s Bike Lane Debate.",
+    description: `The primary objective of this project is to create a visualization-rich, interactive article to assess the impact of bike lane removal on affected neighborhoods.`,
+    mainImage: "https://github.com/user-attachments/assets/bf57e443-1ad2-4329-9e78-9f75b4f2b607",
+    secondaryImage: "https://github.com/user-attachments/assets/02d4d95a-7a3d-4507-a03b-17b602f49636",
+    githubLink: "https://github.com/hermanjustino/Msc.-DS-Assignment-Repo/tree/main/Data_Visualization",
+    appLink: "https://hermanjustino.com/articles/final/",
+    type: "Data Science",
+    tools: ["Python", "ggplot2", "leaflet", "R"]
+  },
   /*
   {
     name: "NYPD Crime Analysis",
