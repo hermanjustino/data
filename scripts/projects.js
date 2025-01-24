@@ -85,6 +85,28 @@ There is a significant difference in the number of incidents based on victim sex
     type: "Data Science",
     tools: ["Python", "ggplot2", "leaflet", "R"]
   },
+  {
+    id: 7,
+    name: "Social Engineering",
+    headline: "What is Social Engineering?",
+    description: `Social Engineering presentation that shows that SE tricks people into giving away confidential info by exploiting trust, fear, or urgency.`,
+    mainImage: "https://media.licdn.com/dms/image/v2/D4E22AQHZbepX9ZQoUA/feedshare-shrink_1280/feedshare-shrink_1280/0/1730151168943?e=1740614400&v=beta&t=wf4dh6sEslWnHtrk6oLIHFGWnjJCTvImlRbkMNo-i04",
+    secondaryImage: "https://media.licdn.com/dms/image/v2/D4E22AQGekFRxVGBuwQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1730151169038?e=1740614400&v=beta&t=-rQ2oC3youTLBzFEx7RXA_8Q8llQl963ie1jeKJ1t9Y",
+    appLink: "https://www.canva.com/design/DAGU43-1mVw/MyVLB1sU2WV66N2P_7ZFrw/view?embed#1",
+    type: "Presentation",
+    tools: ["HTML", "JavaScript"]
+  },
+  {
+    id: 8,
+    name: "Cryptography Demistified",
+    headline: "Basics of Cryptography",
+    description: `Cryptography protects data from unauthorized access by encrypting (scrambling) and decrypting (unscrambling) messages.`,
+    mainImage: "https://media.licdn.com/dms/image/v2/D4E22AQHZbepX9ZQoUA/feedshare-shrink_1280/feedshare-shrink_1280/0/1730151168943?e=1740614400&v=beta&t=wf4dh6sEslWnHtrk6oLIHFGWnjJCTvImlRbkMNo-i04",
+    secondaryImage: "https://media.licdn.com/dms/image/v2/D4E22AQGekFRxVGBuwQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1730151169038?e=1740614400&v=beta&t=-rQ2oC3youTLBzFEx7RXA_8Q8llQl963ie1jeKJ1t9Y",
+    appLink: "https://www.canva.com/design/DAGU-rjQSvs/zoTy5aChFdmB9Wx6EBMdfw/view?embed",
+    type: "Presentation",
+    tools: ["HTML", "JavaScript"]
+  },
   /*
   {
     name: "NYPD Crime Analysis",
