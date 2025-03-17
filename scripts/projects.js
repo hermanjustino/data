@@ -90,8 +90,8 @@ There is a significant difference in the number of incidents based on victim sex
     name: "Social Engineering",
     headline: "What is Social Engineering?",
     description: `Social Engineering presentation that shows that SE tricks people into giving away confidential info by exploiting trust, fear, or urgency.`,
-    mainImage: "https://media.licdn.com/dms/image/v2/D4E22AQHZbepX9ZQoUA/feedshare-shrink_1280/feedshare-shrink_1280/0/1730151168943?e=1740614400&v=beta&t=wf4dh6sEslWnHtrk6oLIHFGWnjJCTvImlRbkMNo-i04",
-    secondaryImage: "https://media.licdn.com/dms/image/v2/D4E22AQGekFRxVGBuwQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1730151169038?e=1740614400&v=beta&t=-rQ2oC3youTLBzFEx7RXA_8Q8llQl963ie1jeKJ1t9Y",
+    mainImage: "https://github.com/user-attachments/assets/da139d2a-04ee-48d1-9cfd-14430b80dcb0",
+    secondaryImage: "https://github.com/user-attachments/assets/043b6307-5014-42c1-848f-516398ca8f5c",
     appLink: "https://www.canva.com/design/DAGU43-1mVw/MyVLB1sU2WV66N2P_7ZFrw/view?embed#1",
     type: "Presentation",
     tools: ["HTML", "JavaScript"]
