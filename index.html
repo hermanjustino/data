@@ -146,11 +146,15 @@
   <!--======= Footer =====-->
 
   <footer class="footer">
-    <p>© Herman Justino 2025</p>
+    <p>© Herman Justino <span id="currentYear"></span></p>
     <div class="toggle-container">
       <input type="checkbox" id="toggle-mode" class="toggle-switch">
       <label for="toggle-mode" class="toggle-label"></label>
     </div>
+    
+    <script>
+      document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
   </footer>
 
   <canvas id="neural-network"></canvas>
