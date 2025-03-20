@@ -4,6 +4,10 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('currentYear').textContent = new Date().getFullYear();
+});
+
 // Adjust the number of nodes based on screen width
 const nodeCount = window.innerWidth < 768 ? 50 : 100;
 
