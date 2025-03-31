@@ -116,7 +116,7 @@ There is a significant difference in the number of incidents based on victim sex
     secondaryImage: "https://github.com/user-attachments/assets/60a56126-aadc-4174-91d8-94bd67ce0f06",
     githubLink: "https://github.com/hermanjustino/summar",
     appLink: "https://summar-z6yc.onrender.com",
-    type: "Presentation",
+    type: "Web Application",
     tools: ["React", "JavaScript", "Git", "MongoDB"]
   },
   /*
