@@ -107,6 +107,18 @@ There is a significant difference in the number of incidents based on victim sex
     type: "Presentation",
     tools: ["HTML", "JavaScript"]
   },
+  {
+    id: 9,
+    name: "Summar",
+    headline: "Summar: An AI-powered content management system",
+    description: `An AI-powered content management system that helps transform media consumption into engaging social media posts. Upload articles, podcasts, or videos, add your thoughts, and let us generate tailored content suggestions for LinkedIn, Twitter, Instagram, and more. Built with React, Node.js.`,
+    mainImage: "https://github.com/user-attachments/assets/7fd082fe-09aa-42b5-8905-a792a274f03a",
+    secondaryImage: "https://github.com/user-attachments/assets/60a56126-aadc-4174-91d8-94bd67ce0f06",
+    githubLink: "https://github.com/hermanjustino/summar",
+    appLink: "https://summar-z6yc.onrender.com",
+    type: "Presentation",
+    tools: ["React", "JavaScript", "Git", "MongoDB"]
+  },
   /*
   {
     name: "NYPD Crime Analysis",
