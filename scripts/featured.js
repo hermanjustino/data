@@ -1,10 +1,10 @@
 // Featured projects data
 const featuredProjects = [
   {
-    title: "ONScribe",
+    title: "Ambient Scribe",
     description: "AI-powered health tech for streamlined clinical documentation",
     image: "./assets/scribe.png",
-    link: "https://hj-data-consulting.github.io/ON-text/"
+    link: "https://ambient-scribe-150876109027.us-central1.run.app/"
   },/* 
   {
     title: "Our Journey to Civic Engagement",
