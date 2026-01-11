@@ -1,3 +1,7 @@
 steps:
   - name: 'gcr.io/cloud-builders/gsutil'
-    args: ['-m', 'rsync', '-r', '-d', '.', 'gs://www.hermanjustino.com']
+    # Removed the -d flag here to prevent deleting subfolders like /ford
+    args: ['-m', 'rsync', '-r', '-c', '.', 'gs://www.hermanjustino.com']
+
+options:
+  logging: CLOUD_LOGGING_ONLY
