@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Pedalling Through Policy</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Pedalling Through Policy">
+    <meta property="og:description"
+        content="A data-driven analysis of the impact of bike lane removal on Toronto's neighborhoods, exploring demographics, commute patterns, and socio-economic factors.">
+    <meta property="og:image"
+        content="https://raw.githubusercontent.com/hermanjustino/Msc.-DS-Assignment-Repo/refs/heads/main/Data_Visualization/assets/cover.webp">
+    <meta property="og:url" content="https://hermanjustino.com/articles/final/">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Pedalling Through Policy">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6DJRLTNPLC"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-6DJRLTNPLC');
+    </script>
+</head>
+
+<body>
+        <div class="author-info-container">
+            <h1>Pedalling Through Policy: A Data-Driven Look at Toronto’s Bike Lane Debate</h1>
+            <p class="byline">By <a href="https://hermanjustino.com" class="author-link"><span
+                        class="author-name">Herman
+                        Justino</span></a></p>
+            <div class="author-info">
+                <div class="author-details">
+                    <p class="publish-date">Published on: December 5th, 2024</p>
+                </div>
+            </div>
+            <a href="https://hermanjustino.com">
+                <img src="./assets/HermanJustino.webp" alt="Author Image" class="author-image">
+            </a>
+        </div>
+        <p id="intro-text">In recent years, urban infrastructure planning has become a focal point of debates surrounding sustainable
+            city
+            living. One prominent discussion in Toronto is a proposal to remove bike lanes
+            along
+            Yonge, Bloor, and University Streets. These streets are central to the city's downtown core and serve as
+            vital
+            thoroughfares for commuters, cyclists, and pedestrians alike. The removal of bike lanes raises questions
+            about
+            its potential impact on the neighborhoods these streets traverse, including changes to commute patterns,
+            accessibility, and the quality of life for residents.
+            This article explores the characteristics of the neighborhoods directly affected by the proposed
+            changes using data from the 2021 Census, sourced from the City of Toronto’s open data portal. By analyzing
+            demographics, commute patterns, and socio-economic factors, this analysis aims to provide a data-driven
+            perspective on the implications of this decision.
+        </p>
+        <h2 class="map-title">Interactive Map of Affected Neighborhoods</h2>
+        <div class="map-subheading">
+            <span class="legend-box" style="background-color: #228B22;"></span>
+            Neighborhoods with at least 500m of bike lanes on Yonge, Bloor, and University Streets
+        </div>
+        <div id="map"></div>
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="neighborhoodName" style="float: left; font-size: 24px; font-weight: bold;"></div>
+                <div id="dataDescription" style="clear: both; margin-top: 10px;"></div>
+                <label for="dataSelect">Select Data:</label>
+                <select id="dataSelect">
+                    <option value="ageGroups">Age Population</option>
+                    <option value="commutingTime">Commuting Time</option>
+                    <option value="incomeGroups">Income Groups</option>
+                </select>
+                <canvas id="radialChart"></canvas>
+            </div>
+        </div>
+
+        <h1>Task Overview</h1>
+        <p id="task-text">The primary objective of this project is to create a visualization-rich, interactive article to assess the
+            impact of bike lane removal on affected neighborhoods. The article uses data visualization techniques to:
+        </p>
+        <ul>
+            <li>Explore Demographics:
+                <ul>
+                    <li>Highlight age</li>
+                    <li>Income</li>
+                    <li>Education</li>
+                    <li>Work industry distributions across neighborhoods along Yonge, Bloor, and University Streets</li>
+                </ul>
+            </li>
+        </ul>
+        <h2>Search Neighborhoods</h2>
+        <input type="text" id="searchInput" placeholder="Search for neighborhoods...">
+        <table id="neighborhoodTable">
+            <thead>
+                <tr>
+                    <th onclick="sortTable('name')">Name</th>
+                    <th onclick="sortTable('population')">Population</th>
+                </tr>
+            </thead>
+            <tbody id="neighborhoodList">
+                <!-- Neighborhoods will be populated here by JavaScript -->
+            </tbody>
+        </table>
+
+        <p id="info-text">
+            All visualizations were created using Python and interactive visualization library Chart.js. Data was
+            preprocessed to ensure accuracy and clarity, with missing values handled through appropriate imputation
+            methods.
+            The article incorporates user feedback gathered through formative evaluations, ensuring the content
+            resonates
+            with its target audience.
+        </p>
+
+        <div class="horizontal-line-container">
+            <div class="horizontal-line"></div>
+        </div>
+
+        <h2 class="heading">Conclusion</h2>
+        <p id="conclusion-text">
+            This site represents the beginning of a broader exploration into how Toronto’s bike lane infrastructure
+            impacts
+            its residents. The current visualizations provide valuable insights into neighborhood characteristics,
+            cycling
+            habits, and commuting trends, but this is just the first step.
+            Future updates will incorporate sentiment analysis from social media platforms and Google search trends to
+            capture a dynamic picture of public opinion.
+            <br>By layering these insights with the existing data, the site will
+            evolve into a comprehensive resource for understanding the interplay between infrastructure, policy, and
+            community needs.
+            Thank you for visiting and exploring this first draft. Feedback and suggestions are welcome as I work to
+            refine
+            and expand this project to better serve Toronto’s residents and urban planners.
+        </p>
+
+        <h2 class="heading">References</h2>
+        <ul>
+            <li>City of Toronto Open Data Portal. (2021). Toronto Neighbourhood Profiles. Retrieved from <a
+                    href="https://open.toronto.ca/dataset/neighbourhoods/"
+                    class="author-link">https://open.toronto.ca/dataset/neighbourhoods/.</a>
+            </li>
+            <li>Statistics Canada. (2021). 2021 Census Data for Toronto. Retrieved from <a
+                    href="https://www12.statcan.gc.ca/census-recensement/2021/dp-pd/prof/details/page.cfm?Lang=E&GENDERlist=1,2,3&STATISTIClist=1,4&HEADERlist=0&DGUIDlist=2021A00053520005&SearchText=toronto"
+                    class="author-link">https://www12.statcan.gc.ca/</a>
+            </li>
+        </ul>
+
+        <div class="download-container">
+            <a href="HermanJustinoTorontoBikeData.ipynb" download>
+                <button class="download-button">Download Python Notebook</button>
+            </a>
+        </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-ajax/dist/leaflet.ajax.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.1/dist/chart.min.js"></script>
+    <script src="./scripts/script.js"></script>
+    <script src="./scripts/search.js"></script>
+</body>
+
+</html>
