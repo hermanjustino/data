@@ -1,7 +1,7 @@
 const deployments = [
     {
         id: "flattened-english",
-        title: "AI Cultural Journalist",
+        title: "Flattened English",
         status: "Live / Iterating",
         cloudContext: "Google Cloud (Cloud Run Jobs, BigQuery, Vertex AI, Terraform)",
         testConstraint: "Can we quantify how AI-mediated platforms impose uneven linguistic labor on non-standard English speakers without relying on black-box commercial APIs?",
