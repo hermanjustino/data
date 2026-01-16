@@ -1,5 +1,5 @@
 .featured-container {
-  margin: 4rem 0;
+  margin: 8rem 0 4rem 0;
   padding: 0 2rem;
 }
 
@@ -98,24 +98,24 @@
     max-width: 900px;
     min-height: 350px;
   }
-  
+
   .featured-project-image {
     width: 50%;
     height: auto;
     border-radius: 0 12px 12px 0;
     order: 2;
   }
-  
+
   .featured-project-content {
     width: 50%;
     padding: 5rem;
     order: 1;
   }
-  
+
   .featured-project-title {
     font-size: 2rem;
   }
-  
+
   .featured-project-description {
     font-size: 1.5rem;
   }
@@ -125,7 +125,7 @@
   .featured-project-card {
     max-width: 1000px;
   }
-  
+
   .featured-project-content {
     padding: 2.5rem;
   }
@@ -136,15 +136,15 @@
   .featured-container {
     padding: 0 1rem;
   }
-  
+
   .featured-project-content {
     padding: 1rem;
   }
-  
+
   .featured-project-title {
     font-size: 1.3rem;
   }
-  
+
   .featured-project-description {
     font-size: 0.9rem;
   }

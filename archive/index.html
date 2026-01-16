@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herman - Research Archive</title>
+    <link rel="icon" href="../favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/nav.css">
+    <link rel="stylesheet" href="../styles/featured.css">
+    <link rel="stylesheet" href="../styles/timeline.css">
+
+    <link rel="icon" href="../assets/icon-light-mode.svg?v=1.0" type="image/svg+xml">
+    <link rel="icon" href="../assets/icon-light-mode.svg?v=1.0" type="image/png">
+    <link rel="apple-touch-icon" href="../assets/icon-light-mode.svg?v=1.0">
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-GQHZ2KWBYM"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-GQHZ2KWBYM');
+    </script>
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Herman Justino - Research Archive">
+    <meta property="og:description" content="Selected past projects and experiments by Herman Justino.">
+    <meta property="og:image" content="https://github.com/user-attachments/assets/79b06b29-83cf-4505-b4c2-ba1774c643c1">
+    <meta property="og:url" content="https://hermanjustino.com/archive">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Herman Justino Portfolio">
+    <meta property="og:locale" content="en_US">
+</head>
+
+<body class="light-mode">
+    <nav class="navbar">
+        <a href="../index.html" class="navbar-item">
+            <img src="../assets/icon-dark-mode.svg" alt="Dark Mode Icon" class="brand-icon dark-mode-icon">
+            <img src="../assets/icon-light-mode.svg" alt="Light Mode Icon" class="brand-icon light-mode-icon">
+        </a>
+        <a href="#" class="toggle-button">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+            <ul>
+                <li><a href="../index.html#active-deployments">Deployments</a></li>
+                <li><a href="../index.html#about-me">About/Contact</a></li>
+                <li><a href="./" class="active">Archive</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="center-content">
+        <!-- Archive Section -->
+        <div class="portfolio-container" id="archive">
+            <h1>Research Archive</h1>
+            <h4>Selected past projects and experiments.</h3>
+                <div class="filter-bar">
+                    <div class="tabs">
+                        <button class="tab-button active" data-tab="type">Type</button>
+                        <button class="tab-button" data-tab="tools">Tools</button>
+                    </div>
+                    <div class="tab-content" id="type">
+                        <!-- Filter options for type will be generated here -->
+                    </div>
+                    <div class="tab-content" id="tools" style="display: none;">
+                        <!-- Filter options for tools will be generated here -->
+                    </div>
+                </div>
+                <div id="projects" class="projects-section"></div>
+        </div>
+    </div>
+
+    <div id="project-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h1 id="modal-title"></h1> <!-- Title of the project -->
+            <img id="modal-primary-image" src="" alt="Primary Image">
+            <h2 id="modal-headline"></h2>
+            <a id="modal-app-link" href="#" target="_blank" class="modal-link">View App</a>
+            <p id="modal-description"></p>
+            <img id="modal-secondary-image" src="" alt="Secondary Image">
+            <div class="read-more">
+                <a id="modal-github-link" href="#" target="_blank" class="modal-link">GitHub</a>
+                <a id="modal-notebook-link" href="#" target="_blank" class="modal-link">Notebook</a>
+                <a id="modal-app-link-bottom" href="#" target="_blank" class="modal-link">View App</a>
+            </div>
+        </div>
+        <!-- Add Navigation Arrows -->
+        <button id="prev-arrow" class="nav-arrow prev-arrow">&lt;</button>
+        <button id="next-arrow" class="nav-arrow next-arrow">&gt;</button>
+    </div>
+
+    <!--======= Footer =====-->
+
+    <footer class="footer">
+        <p>© Herman Justino <span id="currentYear"></span></p>
+        <div class="toggle-container">
+            <input type="checkbox" id="toggle-mode" class="toggle-switch">
+            <label for="toggle-mode" class="toggle-label"></label>
+        </div>
+    </footer>
+
+    <canvas id="neural-network"></canvas>
+    <script src="../scripts/neural-network.js?v=1.0"></script>
+    <script src="../scripts/projects.js?v=1.0"></script>
+    <script src="../scripts/nav.js?v=1.1"></script>
+</body>
+
+</html>

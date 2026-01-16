@@ -120,17 +120,17 @@ There is a significant difference in the number of incidents based on victim sex
     tools: ["React", "JavaScript", "Git", "MongoDB"]
   },
   {
-  id: 10,
-  name: "Environmental Defence Canada",
-  headline: "Environmental Defence Canada: Interactive Civic Engagement Tools",
-  description: `A collection of interactive web-based tools designed for Environmental Defence Canada to educate and engage users on civic topics. Features include "Who's in Charge?" (a drag-and-drop quiz about government responsibilities), "Close Elections" (an interactive map showing close election results in Ontario), and "Global Happiness" (data visualizations about happiness and community trust). Developed as part of the ArtWorksTO 2025 Program.`,
-  mainImage: "https://raw.githubusercontent.com/hermanjustino/edc/refs/heads/main/assets/images/quiz-preview.jpg",
-  secondaryImage: "https://raw.githubusercontent.com/hermanjustino/edc/refs/heads/main/assets/images/voter-preview.png",
-  githubLink: "https://github.com/hermanjustino/edc",
-  appLink: "https://hermanjustino.github.io/edc/",
-  type: "Web Application",
-  tools: ["HTML", "JavaScript", "CSS", "leaflet"]
-},
+    id: 10,
+    name: "Environmental Defence Canada",
+    headline: "Environmental Defence Canada: Interactive Civic Engagement Tools",
+    description: `A collection of interactive web-based tools designed for Environmental Defence Canada to educate and engage users on civic topics. Features include "Who's in Charge?" (a drag-and-drop quiz about government responsibilities), "Close Elections" (an interactive map showing close election results in Ontario), and "Global Happiness" (data visualizations about happiness and community trust). Developed as part of the ArtWorksTO 2025 Program.`,
+    mainImage: "https://raw.githubusercontent.com/hermanjustino/edc/refs/heads/main/assets/images/quiz-preview.jpg",
+    secondaryImage: "https://raw.githubusercontent.com/hermanjustino/edc/refs/heads/main/assets/images/voter-preview.png",
+    githubLink: "https://github.com/hermanjustino/edc",
+    appLink: "https://hermanjustino.github.io/edc/",
+    type: "Web Application",
+    tools: ["HTML", "JavaScript", "CSS", "leaflet"]
+  },
   /*
   {
     name: "NYPD Crime Analysis",
@@ -232,7 +232,7 @@ function generateFilterOptions() {
     option.addEventListener('click', () => {
       const filterType = document.querySelector('.tab-button.active').getAttribute('data-tab');
       const filterValue = option.getAttribute('data-filter');
-  
+
       if (filterType === 'tools') {
         if (filterValue === 'all') {
           document.querySelectorAll('.tab-content#tools .filter-option').forEach(opt => opt.classList.remove('active'));
@@ -245,7 +245,7 @@ function generateFilterOptions() {
         document.querySelectorAll('.tab-content#type .filter-option').forEach(opt => opt.classList.remove('active'));
         option.classList.add('active');
       }
-  
+
       filterProjects();
     });
   });
@@ -434,24 +434,6 @@ document.querySelectorAll('.tab-button').forEach(button => {
 
     filterProjects();
   });
-});
-
-document.getElementById('toggle-mode').addEventListener('change', () => {
-  document.body.classList.toggle('dark-mode');
-  document.body.classList.toggle('light-mode');
-
-  // Switch icons based on the mode
-  const isDarkMode = document.body.classList.contains('dark-mode');
-  const githubIcon = document.querySelector('.social-links a:nth-child(1) img');
-  const linkedinIcon = document.querySelector('.social-links a:nth-child(2) img');
-
-  if (isDarkMode) {
-    githubIcon.src = './assets/github-dark.svg';
-    linkedinIcon.src = './assets/linkedin-dark.svg';
-  } else {
-    githubIcon.src = './assets/github-light.svg';
-    linkedinIcon.src = './assets/linkedin-light.svg';
-  }
 });
 
 // Add this to your scripts/projects.js file

@@ -4,7 +4,7 @@ const ctx = canvas.getContext('2d');
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   document.getElementById('currentYear').textContent = new Date().getFullYear();
 });
 
@@ -21,7 +21,7 @@ const nodes = Array.from({ length: nodeCount }, () => ({
 function draw() {
   ctx.clearRect(0, 0, canvas.width, canvas.height);
   const isDarkMode = document.body.classList.contains('dark-mode');
-  const nodeColor = isDarkMode ? '#eee' : '#111';
+  const nodeColor = isDarkMode ? '#eee' : '#212121ff';
   const lineColor = isDarkMode ? 'rgba(238, 238, 238,' : 'rgba(17, 17, 17,';
 
   nodes.forEach(node => {
