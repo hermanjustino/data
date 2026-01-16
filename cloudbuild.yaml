@@ -7,7 +7,6 @@ steps:
     args:
       - compute
       - url-maps
-      - caches
       - invalidate-cdn-cache
       - portfolio-main-lb
       - --path=/*
