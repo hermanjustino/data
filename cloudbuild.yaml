@@ -8,7 +8,7 @@ steps:
       - compute
       - url-maps
       - caches
-      - invalidate
+      - invalidate-cdn-cache
       - portfolio-main-lb
       - --path=/*
       - --project=personal-portfolio-prod
