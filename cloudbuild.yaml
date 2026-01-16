@@ -2,6 +2,16 @@ steps:
   - name: 'gcr.io/cloud-builders/gsutil'
     # Removed the -d flag here to prevent deleting subfolders like /ford
     args: ['-m', 'rsync', '-r', '-c', '.', 'gs://www.hermanjustino.com']
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      - compute
+      - url-maps
+      - caches
+      - invalidate
+      - portfolio-main-lb
+      - --path=/*
+      - --project=personal-portfolio-prod
 
 options:
   logging: CLOUD_LOGGING_ONLY
