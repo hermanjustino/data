@@ -331,6 +331,13 @@ body.light-mode .project-card .links a {
     width: 90%;
   }
 
+  .typewriter {
+    white-space: normal;
+    overflow: visible;
+    width: auto;
+    animation: none;
+  }
+
   .portfolio-container {
     padding: 0;
   }

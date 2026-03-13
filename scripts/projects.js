@@ -2,6 +2,37 @@
 
 const projects = [
   {
+    id: 11,
+    name: "Flattened English",
+    headline: "Auditing AI platforms for uneven linguistic labor on non-standard English speakers",
+    description: `A sociotechnical audit system that quantifies how AI-mediated platforms impose uneven linguistic labor on non-standard English speakers — without relying on black-box commercial APIs.
+
+Built on a serverless event-driven architecture using Google Cloud Run Jobs for long-running scraping tasks (TikTok comments, academic papers), BigQuery ML for co-located regression models, and Terraform for fully reproducible, auditable infrastructure.
+
+Key finding: in sociotechnical audits, infrastructure integrity is part of the scientific method — if the rig isn't reproducible, the social finding is invalid.`,
+    mainImage: "",
+    secondaryImage: "",
+    githubLink: "https://github.com/hermanjustino/flattened-english",
+    appLink: "https://flat-eng.info",
+    type: "Applied AI Research",
+    tools: ["Python", "BigQuery", "Google Cloud", "Terraform", "Vertex AI"]
+  },
+  {
+    id: 12,
+    name: "Clinical Flow",
+    headline: "Real-time ambient clinical documentation under Canadian data residency constraints",
+    description: `A prototype system for generating structured clinical documentation from real-time ambient conversation while satisfying Canadian PIPEDA/PHIPA data residency laws.
+
+Used a split-region architecture: GCS and Cloud DLP in northamerica-northeast1 (Montreal) for compliance, with summarization via Vertex AI MedLM in us-central1 — with strict de-identification before any egress. WebSockets on Cloud Run (via socket.io) maintained persistent connections required for live transcription.
+
+Key lesson: in high-stakes domains like healthcare, latency is a safety constraint. Compliance often forces architectural compromises that must be managed with explicit boundaries.`,
+    mainImage: "",
+    secondaryImage: "",
+    appLink: "https://clinicalflow.org",
+    type: "Applied AI Research",
+    tools: ["Python", "Google Cloud", "WebSockets", "Cloud DLP", "Vertex AI"]
+  },
+  {
     id: 1,
     name: "BASE Repo Initiator",
     headline: "Create an empty HTML project and initialise a local git repository",

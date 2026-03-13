@@ -1,52 +1,31 @@
 const deployments = [
     {
-        id: "flattened-english",
-        title: "Flattened English",
-        status: "Live / Iterating",
-        cloudContext: "Google Cloud (Cloud Run Jobs, BigQuery, Vertex AI, Terraform)",
-        testConstraint: "Can we quantify how AI-mediated platforms impose uneven linguistic labor on non-standard English speakers without relying on black-box commercial APIs?",
+        id: "statera",
+        title: "Statera",
+        status: "Live / Active Development",
+        cloudContext: "Azure (Azure AD, Key Vault, Blob Storage, Cognitive Search) · Self-Hosted PostgreSQL, Redis, ChromaDB",
+        testConstraint: "Can we build a reliable AI-assisted financial document review platform — with annotation, ticking & tying, and multi-model AI orchestration — that financial professionals can trust in high-stakes audit workflows?",
         decisions: [
             {
-                decision: "Serverless Event-Driven Architecture (Cloud Run Jobs)",
-                reason: "Chosen over Cloud Functions to handle long-running scraping tasks (TikTok comments, academic papers) without hitting 9-minute execution timeouts."
+                decision: "Hybrid Django + FastAPI ASGI Architecture",
+                reason: "Django REST Framework handles core REST APIs and auth while FastAPI powers high-performance AI processing endpoints with async support for streaming responses (NDJSON) and batch processing. Both are mounted in a single ASGI process via Starlette, avoiding a full microservices split while preserving performance isolation for AI workloads."
             },
             {
-                decision: "BigQuery as Central Warehouse & ML Engine",
-                reason: "Chosen to co-locate compute and storage. BigQuery ML runs regression models directly on the data, eliminating egress costs and latency associated with moving data to separate notebooks."
+                decision: "Five Specialized Celery Worker Queues",
+                reason: "Heavy operations (PDF page processing, Tantivy indexing, SEC sync, table extraction, orchestration) are separated into dedicated workers with tuned concurrency levels. This prevents memory-intensive page processing from starving lightweight orchestration tasks, and isolates index write operations to a single worker."
             },
             {
-                decision: "Terraform for Infrastructure as Code",
-                reason: "Strict adherence to IAM Least Privilege and reproducibility. In sociotechnical research, the audit infrastructure itself must be auditable."
+                decision: "ChromaDB + Tantivy + Azure Cognitive Search (Tri-Search Stack)",
+                reason: "Each engine handles a distinct search modality: ChromaDB for vector similarity over document embeddings, Tantivy for full-text search over SEC filings, and Azure Cognitive Search for structured issuer lookups. Co-locating all three avoids egress costs and keeps latency within acceptable bounds for real-time workflows."
+            },
+            {
+                decision: "Azure Key Vault for Secret Management in Production",
+                reason: "Financial document platforms operate under strict access control requirements. Centralising secrets in Key Vault enforces auditability and rotation without baking credentials into container images or environment files."
             }
         ],
-        failureMode: "Algorithmic Drift & API Rate Limits",
-        lesson: "In sociotechnical audits, infrastructure integrity is part of the scientific method; if the rig (scraper/pipeline) isn't reproducible, the social finding is invalid.",
-        githubLink: "https://github.com/hermanjustino/flattened-english",
-        activeSite: "https://flat-eng.info"
-    },
-    {
-        id: "clinical-flow",
-        title: "Clinical Flow",
-        status: "Prototype / Research",
-        cloudContext: "Google Cloud (Cloud Run, Vertex AI MedLM, Cloud DLP, GCS)",
-        testConstraint: "Can we generate structured clinical documentation from real-time ambient conversation while satisfying Canadian PIPEDA/PHIPA data residency laws?",
-        decisions: [
-            {
-                decision: "Split-Region Architecture (Canada/US)",
-                reason: "Data residency is a hard constraint. GCS and Cloud DLP stay in `northamerica-northeast1` (Montreal) for compliance, while summarization momentarily dips into `us-central1` for MedLM availability, with strict de-identification happening *before* egress."
-            },
-            {
-                decision: "WebSockets on Cloud Run (not Functions)",
-                reason: "Chosen to support real-time bidirectional audio streaming (`socket.io`). Stateless Cloud Functions cannot maintain the persistent connections required for live transcription."
-            },
-            {
-                decision: "Cloud DLP Integration",
-                reason: "De-identification is handled as an infrastructure service, not application logic. This ensures a consistent privacy layer regardless of upstream changes in the summarization model."
-            }
-        ],
-        failureMode: "Latency-Induced Clinician Distrust",
-        lesson: "In high-stakes domains like healthcare, latency is a safety constraint. Compliance (Data Residency) often forces architectural compromises that must be managed with explicit boundaries (VPC Service Controls).",
-        activeSite: "https://clinicalflow.org"
+        failureMode: "AI Confidence Miscalibration in High-Stakes Review",
+        lesson: "In financial audit tooling, the system's failure modes are not technical outages but silent overconfidence — AI outputs that look correct but are wrong. The architecture must make uncertainty explicit and keep the human reviewer in the loop at every assertion boundary.",
+        activeSite: "https://www.staterasuite.com/"
     }
 ];
 
